@@ -9,10 +9,10 @@ export default function(robot){
 
   let twitterStream = null;
 
-  robot.respond(/favorite/, (msg) => {
-    msg.send("司令官のTwitterのお気に入りを監視するね。えっちなのをいれても暁には内緒にしておくよ");
+  robot.respond(/favorite ([0-9]+)/, (msg) => {
+    msg.send(`司令官のTwitterのお気に入りを監視するね。えっちなのをいれても暁には内緒にしておくよ\ncount:${msg.match[1]}`);
 
-    client.get('favorites/list', function(error, tweets, response){
+    client.get(`favorites/list.json?count=${msg.match[1]}`, function(error, tweets, response){
       if(error) throw error;
 
       tweets.forEach((elem, index, array) => {
