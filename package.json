@@ -22,7 +22,9 @@
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.4.2",
-    "node-fetch": "^1.5.0"
+    "node-fetch": "^1.5.0",
+    "socket.io": "^1.4.5",
+    "twitter": "^1.2.5"
   },
   "engines": {
     "node": "0.10.x"
