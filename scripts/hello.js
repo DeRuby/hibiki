@@ -29,4 +29,8 @@ export default function(robot){
   robot.respond(/こんばんは/, (msg) => {
     msg.send("Добрый вечер（ドーブルイ　ヴィエーチル）. 司令官。おうちに帰りたいね。");
   })
+
+  robot.hear(/イベント/, (msg) => {
+    msg.send("そろそろイベントの季節か。司令官、準備は順調かい？");
+  });
 }
